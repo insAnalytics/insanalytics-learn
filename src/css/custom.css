@@ -1,0 +1,273 @@
+/**
+ * insanalytics learn — Custom Theme
+ * 
+ * ┌─────────────────────────────────────────────────────────┐
+ * │  TO SWITCH TO INSANALYTICS GREEN:                       │
+ * │  Replace all values below with:                         │
+ * │  --ifm-color-primary:          #50B432                  │
+ * │  --ifm-color-primary-dark:     #48a12d                  │
+ * │  --ifm-color-primary-darker:   #44992b                  │
+ * │  --ifm-color-primary-darkest:  #387e23                  │
+ * │  --ifm-color-primary-light:    #5cbd3b                  │
+ * │  --ifm-color-primary-lighter:  #63c143                  │
+ * │  --ifm-color-primary-lightest: #7bcb61                  │
+ * │                                                         │
+ * │  Use https://docusaurus.io/docs/styling-layout#infima   │
+ * │  to auto-generate shades from any base color.           │
+ * └─────────────────────────────────────────────────────────┘
+ */
+
+/* ── LIGHT MODE — React.dev teal ── */
+:root {
+  --ifm-color-primary:          #087ea4;
+  --ifm-color-primary-dark:     #0771935;
+  --ifm-color-primary-darker:   #066b8c;
+  --ifm-color-primary-darkest:  #055873;
+  --ifm-color-primary-light:    #098bb6;
+  --ifm-color-primary-lighter:  #0a91bf;
+  --ifm-color-primary-lightest: #0ba3d8;
+
+  --ifm-code-font-size:         90%;
+  --ifm-font-family-base:       'Sora', system-ui, sans-serif;
+  --ifm-heading-font-weight:    700;
+  --ifm-navbar-height:          60px;
+  --ifm-toc-border-color:       #e5e7eb;
+  --ifm-hr-border-color:        #e5e7eb;
+
+  --docusaurus-highlighted-code-line-bg: rgba(8, 126, 164, 0.08);
+}
+
+/* ── DARK MODE ── */
+[data-theme='dark'] {
+  --ifm-color-primary:          #26aedb;
+  --ifm-color-primary-dark:     #18a5d5;
+  --ifm-color-primary-darker:   #169dcb;
+  --ifm-color-primary-darkest:  #1281a7;
+  --ifm-color-primary-light:    #3ab7e0;
+  --ifm-color-primary-lighter:  #46bce3;
+  --ifm-color-primary-lightest: #6bcaeb;
+
+  --ifm-background-color:       #1a1a2e;
+  --ifm-navbar-background-color: #13131f;
+  --docusaurus-highlighted-code-line-bg: rgba(38, 174, 219, 0.12);
+}
+
+/* ── FONTS ── */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── NAVBAR ── */
+.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  box-shadow: none;
+}
+
+.navbar__title {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.2px;
+}
+
+/* GitHub icon in navbar */
+.header-github-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+  filter: var(--ifm-navbar-link-color);
+}
+
+[data-theme='dark'] .header-github-link::before {
+  filter: invert(1);
+}
+
+/* ── SIDEBAR ── */
+.theme-doc-sidebar-menu {
+  font-size: 14px;
+}
+
+.menu__link {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Quick Links — no collapse toggle */
+.menu__list-item-collapsible--active {
+  font-weight: 700;
+}
+
+/* ── SIDEBAR HIERARCHY ── */
+
+/* Section header labels (GET STARTED, LEARN, RESOURCES) */
+li.sidebar-section-header > .menu__list-item-collapsible .menu__link,
+li.sidebar-section-header > .menu__list-item-collapsible > span {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--ifm-color-emphasis-600);
+  pointer-events: none;
+  cursor: default;
+  background: none !important;
+  padding-left: 8px;
+  margin-bottom: 4px;
+}
+
+/* Hide the caret/arrow on section headers */
+li.sidebar-section-header > .menu__list-item-collapsible .menu__link--sublist::after {
+  display: none;
+}
+
+/* First-level items under section headers (Welcome, Chatbots, etc.) */
+li.sidebar-section-header > .menu__list > li > .menu__link {
+  font-weight: 600;
+}
+
+/* Vertical gap between sections */
+li.sidebar-section-header {
+  margin-top: 16px;
+}
+li.sidebar-section-header:first-child {
+  margin-top: 0;
+}
+
+/* ── CONTENT ── */
+.markdown h1 {
+  font-size: 40px;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.markdown h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+.markdown p {
+  line-height: 1.75;
+}
+
+/* ── CALLOUT / YOU WILL LEARN BOX ── */
+.learn-box {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0 36px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.learn-box h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* ── TOPIC CARD GRID ── */
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.topic-card {
+  border: 1.5px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  padding: 20px;
+  text-decoration: none !important;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  display: block;
+  color: inherit !important;
+}
+
+.topic-card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 20px rgba(8, 126, 164, 0.12);
+  transform: translateY(-2px);
+}
+
+.topic-card-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.topic-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  border: none !important;
+  padding: 0 !important;
+  margin-top: 0 !important;
+}
+
+.topic-card p {
+  font-size: 13.5px;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+/* ── DOWNLOAD BUTTON ── */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ifm-color-primary);
+  color: white !important;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: background 0.2s, transform 0.15s;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+
+.download-btn:hover {
+  background: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.download-btn-outline {
+  background: transparent;
+  color: var(--ifm-color-primary) !important;
+  border: 1.5px solid var(--ifm-color-primary);
+}
+
+.download-btn-outline:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+/* ── VIDEO EMBED ── */
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 20px 0;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── CODE BLOCKS ── */
+.prism-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13.5px;
+}
