@@ -7,8 +7,8 @@ const config: Config = {
   tagline: 'Practical AI training built by practitioners',
   favicon: 'img/favicon.ico',
 
-  url: 'https://learn.insanalytics.com',
-  baseUrl: '/',
+  url: 'https://insanalytics.github.io',
+  baseUrl: '/insanalytics-learn/',
 
   organizationName: 'insanalytics',
   projectName: 'insanalytics-learn',
