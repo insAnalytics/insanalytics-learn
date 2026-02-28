@@ -54,7 +54,9 @@ insanalytics-learn/
 │   ├── css/custom.css           # ALL theme colors and custom styles
 │   └── pages/about.tsx          # About page
 ├── static/
-│   └── problem-sets/            # Upload .zip files here
+│   ├── problem-sets/            # Upload .zip files here
+│   └── img/
+│       └── uipath/              # Screenshots for UiPath setup guide
 ├── sidebars.ts                  # Sidebar navigation config
 ├── docusaurus.config.ts         # Site config (navbar, footer, theme)
 └── CLAUDE.md                    # This file
@@ -314,10 +316,14 @@ npm start     # dev server at http://localhost:3000
 npm run build # production build
 ```
 
-The site auto-deploys via **Netlify** on every push to `main`:
+The site auto-deploys via **GitHub Actions** on every push to `master`:
 1. Make changes locally and test with `npm start`
 2. `git add . && git commit -m "your message" && git push`
-3. Netlify builds and deploys automatically (~2 minutes)
+3. GitHub Actions builds and deploys automatically (~2–3 minutes)
+
+- **Workflow file:** `.github/workflows/deploy.yml`
+- **Live URL:** `https://insanalytics.github.io/insanalytics-learn` (eventually `learn.insanalytics.com`)
+- **Node.js version required:** >=20 (workflow uses Node 20)
 
 ---
 
@@ -333,3 +339,39 @@ The site auto-deploys via **Netlify** on every push to `main`:
 | **Downloads** | Always use `download-btn` class — never plain links |
 | **Section index pages** | Every `index.md` should have the `:::info Section note` callout |
 | **Quick links** | Always update the relevant quick-links page when adding videos, problem sets, or resources |
+
+---
+
+## 12. Setup Guide Format (Tool Installation Pages)
+
+Setup pages (e.g. `docs/setup/rpa/uipath.md`) use a consistent step-by-step format:
+
+### Structure
+- **Heading:** `## Step N — Title` (title case, em dash separator)
+- **Body:** 1–2 sentences of instruction
+- **Callout (optional):** one of `:::tip`, `:::warning`, or `:::info`
+- **Screenshot (optional):** immediately after the callout
+
+### Callout usage
+| Callout | When to use |
+|---|---|
+| `:::tip` | Shortcuts, alternative methods, optional actions |
+| `:::warning` | Common mistakes, things to avoid |
+| `:::info` | Clarifying context (e.g. "this name doesn't relate to your employer") |
+
+### Screenshot conventions
+- Store screenshots in `static/img/tool-name/` (e.g. `static/img/uipath/`)
+- Name files `tool-stepname.png` (e.g. `uipath-homepage.png`)
+- Reference in markdown as `![alt text](/img/tool-name/filename.png)`
+- Annotate screenshots (red box/arrow) to highlight the relevant UI element before saving
+
+### Example step
+```md
+## Step 2 — Sign Up for a Free Account
+
+:::tip
+Look for the **"Try UiPath Free"** button in the top-right corner and click it.
+:::
+
+![UiPath homepage — click "Try UiPath Free"](/img/uipath/uipath-homepage.png)
+```

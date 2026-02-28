@@ -16,7 +16,7 @@ Go to [uipath.com](https://www.uipath.com/) to access the UiPath homepage.
 Look for the **"Try UiPath Free"** button in the top-right corner of the page and click it to create your free account.
 :::
 
-![UiPath homepage — click "Try UiPath Free" in the top right](/img/uipath-homepage.png)
+![UiPath homepage — click "Try UiPath Free" in the top right](/img/uipath/uipath-homepage.png)
 
 ## Step 3 — Choose the Right Account Type
 
@@ -24,7 +24,7 @@ Look for the **"Try UiPath Free"** button in the top-right corner of the page an
 If you are signing up with a **personal email** (e.g. Gmail, Outlook), do **not** fill in the work email form. Instead, scroll down and click **"Get Automation Cloud for community"** to sign up for the free Community edition.
 :::
 
-![UiPath sign-up page — click "Get Automation Cloud for community" for personal accounts](/img/uipath-community.png)
+![UiPath sign-up page — click "Get Automation Cloud for community" for personal accounts](/img/uipath/uipath-community.png)
 
 ## Step 4 — Create Your Account
 
@@ -34,7 +34,7 @@ Enter your **work or personal email address** and click **"Create Account"**.
 You can also sign up quickly using **Continue with Google** or **Continue with Microsoft** instead of entering your email manually.
 :::
 
-![UiPath account creation page](/img/uipath-create-account.png)
+![UiPath account creation page](/img/uipath/uipath-create-account.png)
 
 ## Step 5 — Fill In Your Profile
 
@@ -44,7 +44,7 @@ Enter your **Display name** and select your **Country/Region**, then click **"Ne
 Uncheck **"Send me information about UiPath products, events, and promotions"** if you don't want marketing emails.
 :::
 
-![UiPath profile setup page](/img/uipath-profile.png)
+![UiPath profile setup page](/img/uipath/uipath-profile.png)
 
 ## Step 6 — Name Your Cloud Organization
 
@@ -54,7 +54,7 @@ Enter any name you like in the **Cloud Organization Name** field, then click **"
 This is just the name of your personal UiPath workspace — it has nothing to do with the company or organization you work for. You can name it anything, e.g. `test123`.
 :::
 
-![UiPath create cloud organization page](/img/uipath-org.png)
+![UiPath create cloud organization page](/img/uipath/uipath-org.png)
 
 ## Step 7 — Go to the Download Center
 
@@ -62,19 +62,19 @@ You are now logged in to **UiPath Automation Cloud**. We will explore this platf
 
 On the right-hand side, click **"Download center"** to download the UiPath desktop app.
 
-![UiPath Automation Cloud dashboard — click "Download center" on the right](/img/uipath-dashboard.png)
+![UiPath Automation Cloud dashboard — click "Download center" on the right](/img/uipath/uipath-dashboard.png)
 
 ## Step 8 — Download the Community Edition
 
 Under **"Studio, Assistant and Robot"**, click the **"Download"** button in the **Community Edition** box.
 
-![UiPath download center — click Download under Community Edition](/img/uipath-download.png)
+![UiPath download center — click Download under Community Edition](/img/uipath/uipath-download.png)
 
 ## Step 9 — Run the Installer
 
 Once the download completes, open your **Downloads** folder and double-click **`UiPathPlatform.msi`** to launch the installer.
 
-![Downloads folder — run UiPathPlatform.msi](/img/uipath-installer.png)
+![Downloads folder — run UiPathPlatform.msi](/img/uipath/uipath-installer.png)
 
 ## Step 10 — Select Components and Install
 
@@ -85,18 +85,18 @@ On the **"What do you want to do?"** screen:
 3. Check **"I accept the terms in the License Agreement"**
 4. Click **"Install"** — there is no need to use Advanced configuration
 
-![UiPath installer — select Studio and Extensions, accept terms, click Install](/img/uipath-setup.png)
+![UiPath installer — select Studio and Extensions, accept terms, click Install](/img/uipath/uipath-setup.png)
 
 ## Step 11 — Complete the Installation
 
 Wait for the installation to finish. Once you see **"Download complete"** and **"Install complete"**, click **"Close"**.
 
-![UiPath installation complete screen](/img/uipath-complete.png)
+![UiPath installation complete screen](/img/uipath/uipath-complete.png)
 
 ## Step 12 — Open UiPath Studio
 
 UiPath Studio is now installed on your computer. Look for the **UiPath Studio** icon on your desktop and double-click it to launch the app.
 
-![UiPath Studio icon](/img/uipath-studio-icon.png)
+![UiPath Studio icon](/img/uipath/uipath-studio-icon.png)
 
 You're all set — UiPath Studio is ready to use!
