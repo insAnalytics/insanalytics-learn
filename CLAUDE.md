@@ -6,7 +6,7 @@ This is the single source of truth for anyone adding or editing content on insan
 
 ## 1. Site Overview
 
-insanalytics learn is built with **Docusaurus 3**, hosted on **Netlify**, with source on **GitHub**.
+insanalytics learn is built with **Docusaurus 3**, hosted on **GitHub Pages**, with source on **GitHub**.
 
 - **Framework:** Docusaurus 3 (React-based static site generator)
 - **Content format:** Markdown (`.md`) with optional JSX components
@@ -92,7 +92,7 @@ GET STARTED
     Chatbots
     Agentic AI ▾  (VS Code, AntiGravity)
     RAG
-    RPA ▾  (UIPath)
+    RPA ▾  (UiPath)
 
 LEARN
   Chatbots ▾
@@ -375,3 +375,90 @@ Look for the **"Try UiPath Free"** button in the top-right corner and click it.
 
 ![UiPath homepage — click "Try UiPath Free"](/img/uipath/uipath-homepage.png)
 ```
+
+---
+
+### Setup Index Pages (`index.md` in each setup subfolder)
+
+Each setup subfolder (e.g. `docs/setup/rpa/`) has an `index.md` that acts as the landing page for that section. It must follow this structure:
+
+1. **`:::info` callout** — brief note telling the user what the section covers and when to complete it (required by Section 11 style rules)
+2. **One-sentence intro** — e.g. "Follow the guides below to get set up for the RPA section."
+3. **Tools table** — one row per tool guide in that section
+
+#### Tools table format
+
+| Column | Content |
+|---|---|
+| **Tool** | Proper name of the tool |
+| **What it's for** | Plain-English description — no technical jargon (e.g. avoid "IDE", "CLI", "runtime") |
+| **Guide** | Markdown link to the setup page using `/learn/setup/topic/page` path |
+
+#### Example
+
+```md
+## Tools
+
+| Tool | What it's for | Guide |
+|---|---|---|
+| UiPath Studio | Desktop app for building and running automation workflows | [Install UiPath](/learn/setup/rpa/uipath) |
+```
+
+**When to update:** Add a new row **immediately** when creating a new tool setup page in that subfolder — the index page must never be out of sync with its tool guides.
+
+---
+
+## 13. Keeping PROJECT_STATE.md Updated
+
+`PROJECT_STATE.md` in the project root is a living snapshot used in external planning sessions (e.g. Claude Web). It must be kept current.
+
+**Update it in two situations:**
+
+1. **Before every `git push`** — reflect any structural changes made in the session (new pages, new setup guides, decisions made)
+2. **At the end of any editing session** — update "Recent Changes" and "Pending / Planned Work" to reflect what was done and what remains
+
+**Fields to update each time:**
+- `Last updated` date at the top
+- `Learn sections` and `Setup guides` tables — add rows for new pages; mark stubs as complete when filled in
+- `Recent Changes` — briefly note what changed this session
+- `Pending / Planned Work` — tick completed items, add newly identified tasks
+
+---
+
+## 14. Keeping README.md Updated
+
+`README.md` in the project root is the entry point for any new contributor or AI agent coming to the project for the first time. It must stay accurate.
+
+**Update it in two situations:**
+
+1. **Before every `git push`** — if anything in the session affects what a new contributor needs to know (new files, changed conventions, new features, structural changes)
+2. **At the end of any editing session** — review whether the project structure overview, contribution rules, or file descriptions are still accurate
+
+**What typically needs updating:**
+- Project structure tree — if folders or key files have been added or removed
+- Contribution rules — if any conventions have changed or new ones have been added
+- Important files section — if new files with contributor relevance have been created
+- The beta status note — when the site is ready for wider use
+
+If the README and `CLAUDE.md` ever contradict each other, `CLAUDE.md` is the authority. Update the README to match.
+
+---
+
+## 15. Suggesting Updates to CLAUDE.md
+
+`CLAUDE.md` is a living document. When working in this project — whether as a human contributor or an AI agent — you should actively look for opportunities to improve it.
+
+**Suggest an update to `CLAUDE.md` when you encounter any of the following:**
+
+- A new page structure or content format that doesn't fit any existing pattern in CLAUDE.md — propose a documented standard so future contributors can follow it consistently
+- A convention that is unclear, ambiguous, or missing — note what question it leaves unanswered
+- A repeated pattern that isn't yet documented — if something has been done the same way more than once, it should be written down
+- A rule that has been superseded or is no longer being followed — flag it for removal or revision
+- A new tool, component, or workflow that contributors will need to know about
+
+**How to raise a suggestion:**
+
+- If you are an AI agent working in an IDE session: add a comment at the top of your response or in a scratch note flagging the suggestion, and include a proposed rewrite of the relevant section. Do not edit `CLAUDE.md` directly without explicit approval from the section owner or project lead.
+- If you are a human contributor: raise it with the project lead before editing. Small clarifications (fixing a typo, adding a missing example) can be made directly. Structural changes to existing sections need sign-off.
+
+**The goal** is for `CLAUDE.md` to always reflect how the project actually works — not how it was originally planned to work.

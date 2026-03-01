@@ -1,6 +1,6 @@
 ---
 id: uipath
-title: UIPath
+title: UiPath
 slug: /setup/rpa/uipath
 ---
 
